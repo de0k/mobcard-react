@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'NEXON Lv2 Gothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* reset */
+@media all {
+    .clear:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    body {
+        line-height: 1;
+        font-size: 14px;
+        font-weight: 400;
+        color: #000;
+        font-family: 'NEXON Lv2 Gothic' !important;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-family: 'NEXON Lv2 Gothic' !important;
+        line-height: 1;
+        font-size: 1em;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        outline: 0;
+        text-decoration: none;
+        color: #000;
+        font-family: 'NEXON Lv2 Gothic' !important;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    figure,
+    dl,
+    dd,
+    input[type=radio],
+    input[type=checkbox] {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border: none;
+        outline: none;
+        max-width: 100%;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+        word-break: keep-all;
+    }
+
+    button,
+    input,
+    submit {
+        border: none;
+        background: none;
+    }
+
+    dt {
+        font-weight: normal;
+    }
+
+    ::placeholder {
+        font-family: 'NEXON Lv2 Gothic' !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-transition: background-color 9999s ease-out;
+        box-shadow: none !important;
+        -webkit-text-fill-color: none !important;
+    }
+
+    .msg_sound_only,
+    .sound_only {
+        display: inline-block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 0;
+        line-height: 0;
+        border: 0 !important;
+        overflow: hidden !important;
+    }
+    button { font-family: 'NEXON Lv2 Gothic'; }
+    ::placeholder { font-family: 'NEXON Lv2 Gothic'; }
 }
 
-.App-link {
-  color: #61dafb;
+:root {
+    --main-color: #8a4fff;
+    --sub-color: #927ce0;
+    --container-width:640;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+body {
+    background: #ccc;
+}
+
+.AppFrame {
+    width: 100%;
+    max-width: calc(var(--container-width) * 1px);
+    margin: 0 auto;
+    background: #f7fbfc;
+    overflow: hidden;
+    font-size: min(calc(10 / var(--container-width) * 100vw), 10px);
+    line-height: 1.4;
+    
+}
+
+.main_container {
+    background: #fff;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 1fr auto;
+    padding: 0 4em;
+}
+
+.copyright {
+    padding: 3em 0 2em;
+    font-size: 12px;
 }
