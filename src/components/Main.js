@@ -98,7 +98,7 @@ function Main() {
                                 사람들에게 전달해주세요.
                             </p>
                             <div className='btn_v1'>
-                                <Link to="/login" className="link auth-link">로그인</Link>
+                                <Link to="/login" className="link auth-link">로그인1</Link>
                                 <Link to="/signup" className="link auth-link">회원가입</Link>
                             </div>
                         </>
